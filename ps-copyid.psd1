@@ -21,7 +21,7 @@ ModuleVersion = '0.0.1'
 GUID = 'd2ad4bbf-9d0f-45a0-9ee5-1bebb92d0623'
 
 # Author of this module
-Author = 'mstep'
+Author = 'Matheson Steplock'
 
 # Company or vendor of this module
 CompanyName = 'Unknown'
