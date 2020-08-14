@@ -27,7 +27,7 @@ Author = 'Matheson Steplock'
 CompanyName = 'Unknown'
 
 # Copyright statement for this module
-Copyright = '(c) mstep. All rights reserved.'
+Copyright = '(c) Matheson Steplock. All rights reserved.'
 
 # Description of the functionality provided by this module
 Description = 'Simple Powershell Module to emulate ssh-copy-id'
