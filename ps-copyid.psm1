@@ -6,3 +6,4 @@ function PS-CopyID {
     )
     Get-Content $id | ssh $hostname "cat >> .ssh/authorized_keys"
 }
+Export-ModuleMember -Function PS-CopyID
