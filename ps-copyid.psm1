@@ -4,6 +4,6 @@ function PS-CopyID {
         [String]$hostname,
         $id="$env:USERPROFILE\.ssh\id_rsa.pub"
     )
-    Get-Content $id | ssh $hostname "cat >> .ssh/authorized_keys"
+    Get-Content $id | ssh $hostname "mkdir .ssh && touch .ssh/authorized_keys && cat >> .ssh/authorized_keys"
 }
 Export-ModuleMember -Function PS-CopyID
