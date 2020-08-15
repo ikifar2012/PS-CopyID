@@ -1,4 +1,4 @@
-function PS-CopyID {
+function Copy-ID {
     param (
         [Parameter(Mandatory=$true)]
         [String]$hostname,
