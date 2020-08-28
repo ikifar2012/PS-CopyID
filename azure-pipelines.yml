@@ -16,4 +16,4 @@ steps:
    script: |
       Publish-Module -Path . -NuGetApiKey $env:NUGETAPI
   env:
-    NuGetAPI: $(NuGet)
+    NEWGETAPI: $(NUGETAPI)
