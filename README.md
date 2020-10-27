@@ -9,15 +9,20 @@ Then Add it to your `$Profile` using the following command:
 ```ps1
 Write-Output "Import-Module PS-CopyID" | Out-File -Append $Profile
 ```
+
 # Usage
 Simply type:
 ```ps1
 Copy-ID username@hostname
 ```
 Using the above example PS-CopyID will automatically copy the `id_rsa.pub` file in your `.ssh` folder of your PC to your server
-
-
 If you would like to specify a directory follow this example:
 ```ps1
 Copy-ID username@hostname \path\to\your\key
 ```
+
+# Support Me
+[![Buy me a coffee][buymeacoffee-logo]][buymeacoffee]
+
+[buymeacoffee-logo]: https://cdn.buymeacoffee.com/buttons/default-black.png
+[buymeacoffee]: https://www.buymeacoffee.com/mathesonstep
