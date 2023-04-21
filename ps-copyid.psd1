@@ -12,7 +12,7 @@
 RootModule = 'ps-copyid.psm1'
 
 # Version number of this module.
-ModuleVersion = '1.0.6'
+ModuleVersion = '1.1.0'
 
 # Supported PSEditions
 # CompatiblePSEditions = @()
@@ -101,13 +101,13 @@ PrivateData = @{
         # LicenseUri = ''
 
         # A URL to the main website for this project.
-        # ProjectUri = ''
+        ProjectUri = 'https://github.com/ikifar2012/PS-CopyID'
 
         # A URL to an icon representing this module.
         # IconUri = ''
 
         # ReleaseNotes of this module
-        # ReleaseNotes = ''
+        ReleaseNotes = 'https://github.com/ikifar2012/PS-CopyID/releases'
 
         # Prerelease string of this module
         # Prerelease = ''
@@ -123,7 +123,7 @@ PrivateData = @{
 } # End of PrivateData hashtable
 
 # HelpInfo URI of this module
-# HelpInfoURI = ''
+HelpInfoURI = 'https://github.com/ikifar2012/PS-CopyID/blob/master/README.md'
 
 # Default prefix for commands exported from this module. Override the default prefix using Import-Module -Prefix.
 # DefaultCommandPrefix = ''
