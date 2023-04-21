@@ -22,7 +22,4 @@ Copy-ID username@hostname \path\to\your\key
 ```
 
 # Support Me
-[![Buy me a coffee][buymeacoffee-logo]][buymeacoffee]
-
-[buymeacoffee-logo]: https://cdn.buymeacoffee.com/buttons/default-black.png
-[buymeacoffee]: https://www.buymeacoffee.com/mathesonstep
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/B0B84ZX96)
