@@ -57,6 +57,13 @@ function Copy-ID {
 '@
 
     Get-Content $id | ssh $hostname $remoteCommands
+    # Check for success
+    if ($?) {
+        Write-Host "Key Installed Successfully"
+    }
+    else {
+        Write-Warning "Key Installation Failed"
+    }
 }
 
 Export-ModuleMember -Function Copy-ID
