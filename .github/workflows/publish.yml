@@ -14,4 +14,24 @@ jobs:
           NUGET_KEY: ${{ secrets.NUGET_KEY }}
         shell: pwsh
         run: |
-          Publish-Module -Path ./ps-copyid/ -NuGetApiKey $env:NUGET_KEY -Repository PSGallery
+          $modulePath = Join-Path $env:GITHUB_WORKSPACE "ps-copyid"
+          if (-not (Test-Path $modulePath)) {
+              throw "Module path not found: $modulePath"
+          }
+          
+          try {
+              Write-Host "Publishing module from: $modulePath"
+              Publish-Module -Path $modulePath -NuGetApiKey $env:NUGET_KEY -Repository PSGallery -ErrorAction Stop
+              
+              # Verify publish was successful
+              $moduleInfo = Test-ModuleManifest -Path (Join-Path $modulePath "ps-copyid.psd1")
+              $publishedModule = Find-Module -Name $moduleInfo.Name -RequiredVersion $moduleInfo.Version
+              if ($publishedModule) {
+                  Write-Host "Successfully published $($moduleInfo.Name) version $($moduleInfo.Version)"
+              } else {
+                  throw "Module verification failed after publish"
+              }
+          }
+          catch {
+              throw "Failed to publish module: $_"
+          }
