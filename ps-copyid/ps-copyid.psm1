@@ -40,6 +40,12 @@ function Copy-ID {
     if (-not (Test-Path -Path $id)) {
         throw "Could not find public key file: $id"
     }
+    
+    # Verify key format
+    $keyContent = Get-Content $id
+    if (-not ($keyContent -match '^(ssh-rsa|ssh-ed25519|ecdsa-sha2-nistp256|ecdsa-sha2-nistp384|ecdsa-sha2-nistp521)\s+[A-Za-z0-9+/]+[=]{0,3}\s+.*$')) {
+        throw "Invalid SSH public key format in file: $id"
+    }
 
     # The critical part: Remote commands to handle SSH directory and permissions
     $remoteCommands = @'
